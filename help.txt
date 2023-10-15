@@ -1,0 +1,4 @@
+pip install gspread
+pip install time
+pip install requests
+

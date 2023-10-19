@@ -11,8 +11,8 @@ def print_price(dic_price):
 	while True:
 		name = worksheet.cell(n, 3).value 											#читаем ячейку с координатами n - строка, 3 столбец
 		if name is not None:
-			worksheet.update_cell(n, 4, dic_price[name]) 							#пишем ячейку с координатами n - строка, 4 столбец
-			print(f'Пишу котировку {name} - {dic_price[name]} в гугл таблицу')
+			worksheet.update_cell(n, 4, dic_price.get(name)) 							#пишем ячейку с координатами n - строка, 4 столбец
+			print(f'Пишу котировку {name} - {dic_price.get(name)} в гугл таблицу')
 		else:
 			print('Выполнение записи котировок акций в гугл таблицу - завершено') 
 			break 																	#пустая ячейка прерывает цикл

@@ -14,7 +14,7 @@ def print_price(dic_price):
 			worksheet.update_cell(n, 4, dic_price.get(name)) 							#пишем ячейку с координатами n - строка, 4 столбец
 			print(f'Пишу котировку {name} - {dic_price.get(name)} в гугл таблицу')
 		else:
-			print('Выполнение записи котировок акций в гугл таблицу - завершено') 
+			print(f'{time.strftime("%m/%d/%Y, %H:%M:%S", time.localtime())} - Выполнение записи котировок акций в гугл таблицу - завершено')
 			break 																	#пустая ячейка прерывает цикл
 		n += 1
 		time.sleep(1) #максимум 60 запросов в минуту к гугл таблицам
